@@ -1,19 +1,19 @@
 {
-  "name": "n8n-nodes-<...>",
-  "version": "0.1.0",
-  "description": "",
+  "name": "n8n-nodes-discord-verifier",
+  "version": "0.1.14",
+  "description": "This is a verifier node to check incoming discord webhook calls",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Stephen Seaton-Blanchard",
+    "email": "stephen@seatoncode.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/Bored0ne/n8n-nodes-discord-webhook.git"
   },
   "engines": {
     "node": ">=18.10",
@@ -36,20 +36,22 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/credentials/ExampleCredentialsApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/DiscordVerifier/DiscordVerifier.node.js"
     ]
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.15",
+    "@types/node": "^22.13.1",
     "@typescript-eslint/parser": "^7.15.0",
     "eslint": "^8.56.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.1",
     "gulp": "^4.0.2",
+    "lodash": "^4.17.21",
     "prettier": "^3.3.2",
+    "tweetnacl": "^1.0.3",
     "typescript": "^5.5.3"
   },
   "peerDependencies": {
